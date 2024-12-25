@@ -28,5 +28,10 @@ public class BookController {
 	public Book addBook(@RequestBody Book book) {
 		return bookRepository.save(book);
 	}
+	
+	@GetMapping("/status")
+	public String status() {
+		return "server is running";
+	}
 
 }
